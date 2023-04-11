@@ -5,6 +5,13 @@ public class InputCheck : MonoBehaviour
     public GameObject Ball;
     public GameObject Colliderboi;
     public bool IsCol;
+    public AudioSource hitsource;
+    public AudioClip clip;
+    private void Start()
+    {
+        hitsource = GameObject.Find("Hit sound").GetComponent<AudioSource>();
+        clip = Resources.Load<AudioClip>("Working Platform/hit");
+    }
     private void Update()
     {
         Ball = GameObject.Find("Ball");
@@ -13,6 +20,7 @@ public class InputCheck : MonoBehaviour
         {
             Ball.GetComponent<Move>().HasInputYet = true;
             Ball.name = "BallFinished";
+            hitsource.PlayOneShot(clip);
         }
 
     }

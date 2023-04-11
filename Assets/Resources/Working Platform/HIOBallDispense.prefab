@@ -130,10 +130,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5296816409249228412}
-  - component: {fileID: 5296816409249228413}
   - component: {fileID: 5296816409249228415}
   - component: {fileID: 5296816409249228414}
   - component: {fileID: 5296816409249228401}
+  - component: {fileID: 8629268505406527039}
   m_Layer: 0
   m_Name: HIOBallDispense
   m_TagString: Untagged
@@ -156,32 +156,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5296816409249228413
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5296816409249228410}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.25, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.48}
-    newSize: {x: 0.48, y: 0.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 2}
-  m_EdgeRadius: 0
 --- !u!114 &5296816409249228415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +184,8 @@ MonoBehaviour:
   Ballspawn: {fileID: 5295563389762123590, guid: cb9b15de0aadf7d40abe54463c982aa0, type: 3}
   Trigger: {fileID: 0}
   ballspawner: {fileID: 0}
+  BallAudio: {fileID: 0}
+  Ballspawnaudio: {fileID: 0}
 --- !u!212 &5296816409249228401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -261,3 +237,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &8629268505406527039
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5296816409249228410}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.125, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.0018089563, y: 0.9922509}
+  - {x: 0.01486741, y: -1.0089273}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
